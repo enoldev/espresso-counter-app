@@ -1,0 +1,123 @@
+[
+    {
+        "type": "constructor",
+        "inputs": [
+            {
+                "name": "_mailbox",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "handle",
+        "inputs": [
+            {
+                "name": "_origin",
+                "type": "uint32",
+                "internalType": "uint32"
+            },
+            {
+                "name": "_sender",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            },
+            {
+                "name": "_body",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "mailbox",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "contract IMailbox"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "number",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "sendMessage",
+        "inputs": [
+            {
+                "name": "_destinationChainId",
+                "type": "uint32",
+                "internalType": "uint32"
+            },
+            {
+                "name": "_destinationAddress",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_body",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "event",
+        "name": "CounterIncremented",
+        "inputs": [
+            {
+                "name": "newNumber",
+                "type": "uint256",
+                "indexed": false,
+                "internalType": "uint256"
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "CounterTriggered",
+        "inputs": [
+            {
+                "name": "_destinationChainId",
+                "type": "uint32",
+                "indexed": false,
+                "internalType": "uint32"
+            },
+            {
+                "name": "_destinationAddress",
+                "type": "address",
+                "indexed": false,
+                "internalType": "address"
+            }
+        ],
+        "anonymous": false
+    }
+]
