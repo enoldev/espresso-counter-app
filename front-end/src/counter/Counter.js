@@ -15,12 +15,12 @@ const RARI_RPC = "https://rari-testnet.calderachain.xyz/http";
 const NODEOPS_RPC = "https://nodewatch-network.rpc.caldera.xyz/http";
 
 const WALLETS = {
-    "WALLET_PUBLIC_KEY": "WALLET_PRIVATE_KEY"
+    "WALLET_PUBLIC_KEY": process.env.REACT_APP_WALLET_PRIVATE_KEY
 }
 const nodeOpsProvider = new ethers.JsonRpcProvider(NODEOPS_RPC);
 const rariProvider = new ethers.JsonRpcProvider(RARI_RPC);
 
-const wallet = new ethers.Wallet(WALLETS['<YOUR_WALLET>'], nodeOpsProvider);
+const wallet = new ethers.Wallet(WALLETS['WALLET_PUBLIC_KEY'], nodeOpsProvider);
 
 const nodeOpsCounterContract = new ethers.Contract(NODEOPS_CONTRACT, ABI_COUNTER, wallet);
 const rariCounterContract = new ethers.Contract(RARI_CONTRACT, ABI_COUNTER, rariProvider);
