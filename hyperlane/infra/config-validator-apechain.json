@@ -1,0 +1,40 @@
+{
+    "chains": {
+        "apechaintestnet": {
+            "name": "apechaintestnet",
+            "domain": 3313939,
+            "chainId": 3313939,
+            "protocol": "ethereum",
+            "customRpcUrls": "https://apechain.caff.testnet.espresso.network/,https://apechain-tnet.rpc.caldera.xyz/http",
+            "rpcUrls": [
+                {
+                    "http": "https://apechain.caff.testnet.espresso.network"
+                },
+                {
+                    "http": "https://apechain-tnet.rpc.caldera.xyz/http"
+                }
+            ],
+            "blocks": {
+                "reorgPeriod": 0,
+                "estimateBlockTime": 1
+            },
+            "mailbox": "<MAILBOX-ADDRESS>",
+            "validatorAnnounce": "<VALIDATOR-ANNOUNCE-ADDRESS>",
+            "interchainGasPaymaster": "0x0000000000000000000000000000000000000000",
+            "merkleTreeHook": "<MERKLE-TREE-HOOK-ADDRESS>"
+        }
+    },
+    "interval": 2,
+    "originChainName": "apechaintestnet",
+    "db": "/mnt/hyperlane_db",
+    "validator": {
+        "type": "hexKey",
+        "key": "<HEX-KEY>"
+    },
+    "checkpointSyncer": {
+        "type": "localStorage",
+        "path": "/checkpoints"
+    },
+    "reorgPeriod": 0,
+    "metricsPort": "9090"
+}

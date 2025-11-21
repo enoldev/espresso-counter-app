@@ -1,0 +1,66 @@
+{
+  "relayChains": "raritestnet,apechaintestnet",
+  "db": "/mnt/hyperlane_db",
+  "checkpointSyncer": {
+    "type": "localStorage",
+    "path": "/checkpoints"
+  },
+  "interval": 2,
+  "defaultSigner": {
+    "type": "hexKey",
+    "key": "<PRIVATE-KEY>"
+  },
+  "chains": {
+    "raritestnet": {
+      "name": "raritestnet",
+      "domain": 1918988905,
+      "chainId": 1918988905,
+      "protocol": "ethereum",
+      "customRpcUrls": "https://rari.caff.testnet.espresso.network,https://rari-testnet.calderachain.xyz/http",
+      "rpcUrls": [
+        {
+          "http": "https://rari.caff.testnet.espresso.network"
+        },
+        {
+          "http": "https://rari-testnet.calderachain.xyz/http"
+        }
+      ],
+      "blocks": {
+        "reorgPeriod": 0,
+        "estimateBlockTime": 1
+      },
+      "signer": {
+        "type": "hexKey",
+        "key": "<PRIVATE-KEY>"
+      },
+      "mailbox": "<MAILBOX-ADDRESS>",
+      "validatorAnnounce": "<VALIDATOR-ANNOUNCE-ADDRESS>",
+      "interchainGasPaymaster": "0x0000000000000000000000000000000000000000",
+      "merkleTreeHook": "<MERKLE-TREE-HOO-ADDRESSK>"
+    },
+    "apechaintestnet": {
+      "name": "apechaintestnet",
+      "domain": 3313939,
+      "chainId": 3313939,
+      "protocol": "ethereum",
+      "customRpcUrls": "https://apechain.caff.testnet.espresso.network,https://apechain-tnet.rpc.caldera.xyz/http",
+      "rpcUrls": [
+        {
+          "http": "https://apechain.caff.testnet.espresso.network"
+        },
+        {
+          "http": "https://apechain-tnet.rpc.caldera.xyz/http"
+        }
+      ],
+      "blocks": {
+        "reorgPeriod": 0,
+        "estimateBlockTime": 1
+      },
+      "mailbox": "<MAILBOX-ADDRESS>",
+      "validatorAnnounce": "<VALIDATOR-ANNOUNCE-ADDRESS>",
+      "interchainGasPaymaster": "0x0000000000000000000000000000000000000000",
+      "merkleTreeHook": "<MERKLE-TREE-HOO-ADDRESSK>"
+    }
+  },
+  "metricsPort": "9091"
+}

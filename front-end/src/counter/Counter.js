@@ -8,8 +8,8 @@ import { ethers } from "ethers";
 import ABI_COUNTER from "./counter.json"
 import ABI_MAILBOX from "./mailbox.json"
 
-const RARI_CONTRACT = "0x0A7Ce480e97a2ff0cFecF4206452C2C2441192f6";
-const NODEOPS_CONTRACT = "0x6896bBF0472aa75ACa289e2Ff6B6D1675DEbd5a5";
+const RARI_CONTRACT = "<ADDRESS>";
+const NODEOPS_CONTRACT = "<ADDRESS>";
 
 const RARI_RPC = "https://rari-testnet.calderachain.xyz/http";
 const NODEOPS_RPC = "https://nodewatch-network.rpc.caldera.xyz/http";

@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  validator-rari:
+    image: gcr.io/abacus-labs-dev/hyperlane-agent:agents-v1.4.0
+    container_name: validator_rari
+    env_file: .env
+    environment:
+      CONFIG_FILES: /config.json
+    volumes:
+      - ./hyperlane_db_validator_rari:/mnt/hyperlane_db
+      - ./config-validator-rari.json:/config.json
+      - ./checkpoints-rari:/checkpoints
+    command: [ "./validator" ]
+    ports:
+      - "9091:9090/tcp"
+
+  relayer:
+    image: gcr.io/abacus-labs-dev/hyperlane-agent:agents-v1.4.0
+    container_name: relayer
+    env_file: .env
+    environment:
+      CONFIG_FILES: /config.json
+    volumes:
+      - ./hyperlane_db_relayer:/mnt/hyperlane_db
+      - ./config-relayer.json:/config.json
+      - ./checkpoints:/checkpoints
+    command: [ "./relayer" ]
+    ports:
+      - "9092:9090/tcp"
